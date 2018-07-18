@@ -5,11 +5,12 @@ num2 = int(input("Enter number 2: "))
 num3 = int(input("Enter number 3: "))
 avg = (num1+num2+num3)/3
 print("The average of the three numbers is: ", avg)
-step2 = [num3,num1,num2]
-for lowest in step2:
-    if(num1>num2) and (num1>num3):
-        num1 = lowest
-        if(num2>num1) and (num2>num3):
-            num2 = lowest
+numlist = [num3,num1,num2]
+hold_large_num = 0
+for num in numlist:
+    if(num>hold_large_num):
+        hold_large_num = num
+        
+print("\n BTW, the highest of the numbers you typed in is: ", hold_large_num)
 
-print("\n BTW, the highest of the numbers you typed in is: ", lowest)
+#pardon my lack of use of comoments, really
